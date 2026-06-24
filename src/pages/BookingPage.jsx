@@ -48,7 +48,7 @@ function BookingPage(){
             <h1 className="text-2xl font-bold flex items-center justify-center sm:text-3xl">Réservation en ligne</h1>
 
             <Stepper etapeActuelle={etape} onNav={OnNavig}></Stepper>
-            <div>Valeur étape : {etape}</div>
+            <div className="hidden">Valeur étape : {etape}</div>
             {etape ===1 && <ServiceSelector onSelect={GestionServiceSelect} />}
             {etape ===2 && <Calendar onDateSelect={GestionDateSelect} onRetour={etapePrecedente}/>}
             {etape ===3 && <TimeSlots onSlotSelect={GestionTimeSlots} onRetour={etapePrecedente}/>}
